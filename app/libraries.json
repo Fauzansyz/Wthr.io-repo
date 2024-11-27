@@ -1,0 +1,54 @@
+[
+  {
+    "artifactId": "kotlin-stdlib",
+    "excludes": [],
+    "groupId": "org.jetbrains.kotlin",
+    "scope": "compile",
+    "versionName": "1.5.21"
+  },
+  {
+    "artifactId": "appcompat",
+    "excludes": [],
+    "groupId": "androidx.appcompat",
+    "scope": "compile",
+    "versionName": "1.3.1"
+  },
+  {
+    "artifactId": "material",
+    "excludes": [],
+    "groupId": "com.google.android.material",
+    "scope": "compile",
+    "versionName": "1.4.0"
+  },
+  {
+    "artifactId": "constraintlayout",
+    "excludes": [],
+    "groupId": "androidx.constraintlayout",
+    "scope": "compile",
+    "versionName": "2.1.0"
+  },
+  {
+    "artifactId": "play-services-location",
+    "excludes": [],
+    "groupId": "com.google.android.gms",
+    "versionName": "18.0.0"
+  },
+  {
+    "artifactId": "okhttp",
+    "excludes": [],
+    "groupId": "com.squareup.okhttp3",
+    "versionName": "4.9.1"
+  },
+  {
+    "artifactId": "kotlinx-coroutines-android",
+    "excludes": [],
+    "groupId": "org.jetbrains.kotlinx",
+    "versionName": "1.3.9"
+  },
+  {
+    "artifactId": "json",
+    "excludes": [],
+    "groupId": "org.json",
+    "versionName": "20210307"
+  }
+]
