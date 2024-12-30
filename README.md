@@ -9,8 +9,9 @@ Aplikasi [Wthr.io/cuaca/forecast] modern, aman, dan mudah digunakan. Solusi idea
 
 ## ✨ Fitur Utama  
 ✅ **UI/UX Modern**: Desain simple untuk pengalaman pengguna yang mulus.  
-✅ **Integrasi API**: Mendukung API [https://openmeteo.com].  
-✅ **Informasi Akurat dan real time**: Mendukung pengambilan data cuaca real-time dang lengkap .
+✅ **Integrasi API**: Mendukung API [https://open-meteo.com].  
+✅ **Informasi Akurat dan real time**: Mendukung pengambilan data cuaca real-time dang lengkap.
+
 ✅ **Info gempa**: Fitur untuk melihat gempa yang terjadi secara real time.  
 ![Screenshot Aplikasi](https://github.com/Fauzansyz/Wthr.io-repo/blob/assets/2024-12-29%2019-53-04%20High%20Res%20Screenshot.png)  
 
