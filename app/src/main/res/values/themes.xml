@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.MyApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Mengubah warna Status Bar menjadi putih -->
-        <item name="android:statusBarColor">@color/lightseablue</item>
+        <item name="android:statusBarColor">@color/abu-abu</item>
 
         <!-- Mengubah teks dan ikon di Status Bar menjadi hitam -->
         <item name="android:windowLightStatusBar">false</item>

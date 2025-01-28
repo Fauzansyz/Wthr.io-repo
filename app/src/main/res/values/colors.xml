@@ -11,4 +11,27 @@
 	<color name="lightseablue">#4167F8</color>
 	<color name="color-mode">#303030</color>
 	<color name="text-mode">#FFFFFFFF</color>
+	<color name="white-transparent">#80FFFFFF</color>
+	<color name="day_color">#FFCC80</color> <!-- Warna untuk siang -->
+	  <color name="day_clear">#87CEFA</color> <!-- Biru Cerah -->
+    <color name="night_strom">#2F4F4F</color> <!-- Hijau Gelap -->
+    <color name="day_rain">#00BFFF</color> <!-- Biru Hujan -->
+    <color name="day_storm">#00008B</color> <!-- Biru Badai -->
+    <color name="day_cloudy">#A9A9A9</color> <!-- Abu-Abu Cerah -->
+
+    <color name="night_rain">#4682B4</color> <!-- Biru Hujan -->
+    <color name="night_clear">#191970</color>
+    <color name="night_color">#1A237E</color> <!-- Warna untuk malam -->
+	<color name="night_cloudy">#696969</color> <!-- Abu-Abu Gelap -->
+
+    <!-- Warna tambahan untuk kondisi kabut atau lainnya -->
+    <color name="fog_light">#D3D3D3</color> <!-- Abu-Abu Kabut Ringan -->
+    <color name="fog_heavy">#A9A9A9</color> <!-- Abu-Abu Kabut Berat -->
+    <color name="drizzle_light">#B0E0E6</color> <!-- Biru Gerimis Ringan -->
+    <color name="drizzle_heavy">#5F9EA0</color> <!-- Hijau Biru Gerimis Berat -->
+    <color name="snow_light">#FFFFFF</color> <!-- Putih Salju Ringan -->
+    <color name="snow_heavy">#F8F8FF</color> <!-- Putih Salju Berat -->
+
+    <!-- Default -->
+    <color name="default_background">#F0F8FF</color> <!-- Default Latar -->
 </resources>

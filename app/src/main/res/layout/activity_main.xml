@@ -1,29 +1,44 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/abu-abu"
     tools:context=".MainActivity" >
 
-	<androidx.cardview.widget.CardView
-			android:layout_height="100dp"
-			android:layout_width="fill_parent"
-	    	app:cardBackgroundColor="@android:color/transparent"
-			
-			android:layout_gravity="top"
-			app:cardElevation="0dp"
-			android:orientation="horizontal"
-			>
-			<TextView
-				android:layout_height="wrap_content"
-				android:layout_width="wrap_content"
-				android:text="Wthr.io"
-				android:textSize="30sp"
-				android:textColor="@color/white"
-				android:layout_gravity="center"
-				/>
-		</androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="top"
+        android:orientation="horizontal"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardElevation="0dp" >
+
+        <ImageView
+            android:id="@+id/imageSetting"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="30dp"
+            android:src="@drawable/icon_setting" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <ImageView
+            android:id="@+id/centerCard"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="30dp"
+            android:src="@drawable/about-icon" />
+    </androidx.cardview.widget.CardView>
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -37,7 +52,7 @@
             android:id="@+id/temperatureTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="2dp"
             app:layout_constraintBottom_toBottomOf="@id/windTextView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -46,105 +61,154 @@
             android:textColor="@android:color/white"
             android:textSize="48sp" />
 
+        <ImageView
+            android:id="@+id/weatherIcon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            app:layout_constraintBottom_toBottomOf="@id/temperatureTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:gravity="center"
+            android:src="@drawable/icons" />
+
         <!-- kondisi cuaca saat ini -->
 
         <TextView
             android:id="@+id/weatherConditionTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="60dp"
+            android:layout_marginTop="30dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/windTextView"
+            app:layout_constraintTop_toBottomOf="@id/weatherIcon"
             android:text="Weather Condition"
             android:textColor="@android:color/white"
             android:textSize="18sp" />
 
         <TextView
+            android:id="@+id/data3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/weatherIcon"
+            android:text="Kelembapan:"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+			
+			
+        <TextView
             android:id="@+id/locationTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            android:padding="15dp"
             android:text="Location"
-            android:textColor="@android:color/white"
-            android:textSize="20sp" />
-    </LinearLayout>
-    <!-- bottom navigation -->
-
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="200dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="parent"
-        android:background="@android:color/transparent"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal" >
-
-        <!-- kecepatan angin -->
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:gravity="start"
             android:textAlignment="center"
-            app:cardBackgroundColor="@color/lightseablue"
-            app:cardCornerRadius="5dp" >
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        app:layout_constraintBottom_toBottomOf="parent" >
+
+        <!-- Kartu Kiri -->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/leftCard"
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="100dp"
+            android:layout_marginLeft="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/card_info_round"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp" >
 
             <TextView
                 android:id="@+id/windTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_margin="9dp"
-                android:gravity="center_horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" 
                 android:text="Wind Speed"
-                android:textColor="@android:color/white"
-                android:textSize="16sp" />
-        </androidx.cardview.widget.CardView>
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:contentPadding="20dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <!-- cuaca di update -->
+        <!-- Kartu Kanan -->
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginLeft="10dp"
-            android:gravity="center"
-            app:cardBackgroundColor="@color/lightseablue"
-            app:cardCornerRadius="5dp" >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/rightCard"
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="100dp"
+            android:layout_marginRight="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/card_info_round"
+           
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp" >
 
             <TextView
                 android:id="@+id/updatedTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_margin="10dp"
-                android:gravity="center_horizontal"
+                android:layout_margin="11dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				app:layout_constraintRight_toRightOf="parent"
+				app:layout_constraintBottom_toBottomOf="parent"
                 android:text="Updated"
-                android:textColor="@android:color/white"
-                android:textSize="15sp" />
-        </androidx.cardview.widget.CardView>
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <!-- about/info -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bottomCard"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rightCard"
+            android:background="@drawable/card_info_round"
+           
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp" >
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginLeft="10dp"
-            android:gravity="end"
-            android:onClick="about"
-            
-			app:cardBackgroundColor="@android:color/transparent"
-            app:cardCornerRadius="5dp" >
-
-            <ImageView
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:layout_gravity="center"
-                android:src="@drawable/about-icons" />
-        </androidx.cardview.widget.CardView>
-    </LinearLayout>
+            <TextView
+                android:id="@+id/infoGempa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+				app:layout_constraintLeft_toLeftOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				app:layout_constraintRight_toRightOf="parent"
+				app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_margin="10dp"
+                android:text="Info gempa"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
